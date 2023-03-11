@@ -15,12 +15,11 @@ import java.util.Map;
 public class GameController {
     GameService gameService;
 
-    @RequestMapping(value = "/room", method = RequestMethod.GET)
+    @RequestMapping(value = "/room", method = RequestMethod.POST)
     public Roomentitiy CreateRoom(@RequestParam(value = "user")Userentitiy userentitiy)
     {
         return gameService.CreateRoom(userentitiy);
     }
-
 
     @RequestMapping(value = "/room", method = RequestMethod.GET)
     public Map<String,Object> GetRoom()
@@ -32,5 +31,11 @@ public class GameController {
     public Roomentitiy CreateRoom(@RequestParam(value = "roomentitiy")Roomentitiy roomentitiy)
     {
         return gameService.DeleteRoom(roomentitiy);
+    }
+    
+    @RequestMapping(value = "/room", method = RequestMethod.PEATCH)
+    public Roomentitiy EnterRoom(@RequestParam(value = "roomentitiy")Roomentitiy roomentitiy)
+    {
+        return gameService.Enjoyparticipate EnterRoom(roomentitiy);
     }
 }
