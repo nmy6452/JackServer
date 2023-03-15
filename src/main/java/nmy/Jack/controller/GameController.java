@@ -33,9 +33,9 @@ public class GameController {
         return gameService.DeleteRoom(roomentitiy);
     }
     
-    @RequestMapping(value = "/room", method = RequestMethod.PEATCH)
-    public Roomentitiy EnterRoom(@RequestParam(value = "roomentitiy")Roomentitiy roomentitiy)
-    {
-        return gameService.Enjoyparticipate EnterRoom(roomentitiy);
-    }
+//    @RequestMapping(value = "/room", method = RequestMethod.PEATCH)
+//    public Roomentitiy EnterRoom(@RequestParam(value = "roomentitiy")Roomentitiy roomentitiy)
+//    {
+//        return gameService.Enjoyparticipate EnterRoom(roomentitiy);
+//    }
 }
